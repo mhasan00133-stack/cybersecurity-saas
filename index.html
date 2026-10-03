@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentinelGuard AI | Autonomous eBPF Cybersecurity & Zero-Trust Cloud Defense</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="SentinelGuard AI delivers kernel-level autonomous threat neutralization via non-intrusive eBPF bytecode and quantum-resistant zero-trust micro-perimeters.">
+  <meta name="keywords" content="cybersecurity, eBPF, zero-trust, post-quantum encryption, cloud security, automated compliance, threat intelligence">
+  <meta name="author" content="SentinelGuard Technologies Inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sentinelguard.ai/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sentinelguard.ai/">
+  <meta property="og:title" content="SentinelGuard AI | Autonomous eBPF Cloud Defense">
+  <meta property="og:description" content="Real-time kernel-level threat neutralization, quantum-resistant micro-segmentation, and continuous compliance for enterprise cloud workloads.">
+  <meta property="og:site_name" content="SentinelGuard AI">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23060913'/%3E%3Cpath d='M600 120 L780 200 L780 360 C780 470 600 550 600 550 C600 550 420 470 420 360 L420 200 Z' fill='none' stroke='%2300f0ff' stroke-width='16'/%3E%3Ctext x='50%25' y='75%25' fill='%23f8fafc' font-size='48' font-family='sans-serif' text-anchor='middle' font-weight='bold'%3ESentinelGuard AI%3C/text%3E%3C/svg%3E">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SentinelGuard AI | Autonomous eBPF Cloud Defense">
+  <meta name="twitter:description" content="Kernel-level autonomous threat neutralization and quantum-resistant zero-trust architecture.">
+  <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23060913'/%3E%3Cpath d='M600 120 L780 200 L780 360 C780 470 600 550 600 550 C600 550 420 470 420 360 L420 200 Z' fill='none' stroke='%2300f0ff' stroke-width='16'/%3E%3Ctext x='50%25' y='75%25' fill='%23f8fafc' font-size='48' font-family='sans-serif' text-anchor='middle' font-weight='bold'%3ESentinelGuard AI%3C/text%3E%3C/svg%3E">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#060913">
+  
+  <!-- Inline Scalable SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 L28 7 L28 17 C28 24 16 30 16 30 C16 30 4 24 4 17 L4 7 Z' fill='%230e1424' stroke='%2300f0ff' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M12 16 L15 19 L21 12' fill='none' stroke='%2300f0ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip-to-Main-Content Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Application Header -->
+  <header class="site-header" role="banner">
+    <div class="header-container container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="SentinelGuard AI - Home">
+        <svg class="brand-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 2 L28 7 L28 17 C28 24 16 30 16 30 C16 30 4 24 4 17 L4 7 Z" class="shield-hull" />
+          <path d="M16 7 L23 10.5 L23 17 C23 21.5 16 25.5 16 25.5 C16 25.5 9 21.5 9 17 L9 10.5 Z" class="shield-core" />
+          <circle cx="16" cy="16" r="3" class="shield-node" />
+        </svg>
+        <span class="brand-name">Sentinel<span class="brand-accent">Guard</span><span class="brand-badge">AI</span></span>
+      </a>
+
+      <!-- Pure CSS Mobile Hamburger Navigation Toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="sr-only">Toggle navigation menu</span>
+      </label>
+
+      <!-- Site Navigation Drawer & Bar -->
+      <nav class="site-nav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#features" class="nav-link">Platform Features</a></li>
+          <li class="nav-item"><a href="#architecture" class="nav-link">Architecture</a></li>
+          <li class="nav-item"><a href="#pricing" class="nav-link">Pricing Plans</a></li>
+          <li class="nav-item"><a href="#compliance" class="nav-link">Certifications</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Enterprise Pilot</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-secondary btn-sm">Client Portal</a>
+          <a href="#contact" class="btn btn-primary btn-sm">Deploy Free Sensor</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main id="main-content" class="main-content" role="main">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+      <div class="hero-container container">
+        
+        <!-- Hero Text & Value Proposition -->
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="pulsing-dot" aria-hidden="true"></span>
+            <span>Kernel-Level eBPF Autonomous Defense v4.2 Live</span>
+          </div>
+
+          <h1 id="hero-heading" class="hero-title">
+            Zero-Trust Cloud Defense with <span class="text-gradient">eBPF Ring-0</span> Machine Speed
+          </h1>
+
+          <p class="hero-subtitle">
+            SentinelGuard AI intercepts, models, and neutralizes zero-day kernel exploits, unauthorized lateral movements, and API vulnerabilities in under 140 microseconds. Zero agents. Zero runtime overhead.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span>Deploy Sensor in 60s</span>
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#architecture" class="btn btn-secondary btn-lg">
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+              </svg>
+              <span>Explore Architecture</span>
+            </a>
+          </div>
+
+          <!-- Micro-Metrics Strip -->
+          <div class="metrics-strip" aria-label="Key Performance Indicators">
+            <div class="metric-card">
+              <span class="metric-value">&lt; 0.14<abbr title="milliseconds">ms</abbr></span>
+              <span class="metric-label">Autonomous Reaction Latency</span>
+            </div>
+            <div class="metric-divider" aria-hidden="true"></div>
+            <div class="metric-card">
+              <span class="metric-value">99.999%</span>
+              <span class="metric-label">Uptime Enforcement SLA</span>
+            </div>
+            <div class="metric-divider" aria-hidden="true"></div>
+            <div class="metric-card">
+              <span class="metric-value">0 Misses</span>
+              <span class="metric-label">Zero-Day Ring-0 Exploit Escapes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal & Telemetry Card -->
+        <aside class="hero-telemetry" aria-label="Real-time Kernel Telemetry Demo">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-controls" aria-hidden="true">
+                <span class="control-dot dot-red"></span>
+                <span class="control-dot dot-amber"></span>
+                <span class="control-dot dot-green"></span>
+              </div>
+              <div class="terminal-title">ebpf-sentinel-core // ring-0 telemetry daemon</div>
+              <div class="terminal-status">
+                <span class="status-indicator-live" aria-hidden="true"></span>
+                <span>MONITORING</span>
+              </div>
+            </div>
+            <div class="terminal-body">
+              <p class="log-line"><span class="log-time">[15:18:02.102]</span> <span class="log-tag log-init">CORE_INIT</span> eBPF probes attached to sys_enter_execve / sys_enter_connect</p>
+              <p class="log-line"><span class="log-time">[15:18:02.104]</span> <span class="log-tag log-info">INFO</span> Dynamic micro-segmentation matrix initialized (K8s cluster: prod-us-east-1)</p>
+              <p class="log-line"><span class="log-time">[15:18:02.219]</span> <span class="log-tag log-alert">ANOMALY</span> Ingress payload matched CVE-2026-8941 pattern on pod/auth-svc-849c</p>
+              <p class="log-line"><span class="log-time">[15:18:02.220]</span> <span class="log-tag log-warn">INTERCEPT</span> Ring-0 bytecode halted execution vector (syscall PID: 40912)</p>
+              <p class="log-line"><span class="log-time">[15:18:02.221]</span> <span class="log-tag log-quarantine">QUARANTINE</span> Blast radius isolated. Cgroup freeze enforced in 0.12ms.</p>
+              <p class="log-line log-active"><span class="log-time">[15:18:02.222]</span> <span class="log-tag log-success">RESOLVED</span> Kyber-1024 cryptographic seal applied. Telemetry piped to SOC-2 audit sink.</p>
+              <div class="terminal-input-row" aria-hidden="true">
+                <span class="prompt-symbol">sentinel@edge-node-04:~$</span>
+                <span class="prompt-cursor"></span>
+              </div>
+            </div>
+            <div class="terminal-footer">
+              <div class="telemetry-stat">
+                <span class="stat-name">Active Kernel Probes:</span>
+                <span class="stat-value">1,420 / 1,420</span>
+              </div>
+              <div class="telemetry-stat">
+                <span class="stat-name">CPU Overhead:</span>
+                <span class="stat-value">&lt; 0.8%</span>
+              </div>
+              <div class="telemetry-stat">
+                <span class="stat-name">Zero-Trust Posture:</span>
+                <span class="stat-value text-accent-cyan">VERIFIED</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- TRUST / COMPLIANCE TICKER -->
+    <section class="trust-banner" aria-label="Security and Industry Certifications">
+      <div class="container trust-container">
+        <h2 class="sr-only">Industry Trust Certifications</h2>
+        <p class="trust-intro">Enterprise-Grade Continuous Assurance</p>
+        <div class="trust-badges-grid">
+          <div class="trust-badge-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span class="trust-title">SOC-2 Type II</span>
+            <span class="trust-subtitle">Continuous Audit</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/>
+            </svg>
+            <span class="trust-title">ISO/IEC 27001</span>
+            <span class="trust-subtitle">Global Standard</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+              <rect width="18" height="18" x="3" y="3" rx="2"/>
+              <path d="M12 8v8M8 12h8"/>
+            </svg>
+            <span class="trust-title">HIPAA Compliant</span>
+            <span class="trust-subtitle">PHI Safeguarded</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <span class="trust-title">GDPR &amp; CCPA</span>
+            <span class="trust-subtitle">Privacy Sovereign</span>
+          </div>
+          <div class="trust-badge-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span class="trust-title">FedRAMP Ready</span>
+            <span class="trust-subtitle">High Baseline</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE FEATURES SECTION (GRID) -->
+    <section id="features" class="features-section" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Autonomous Defense Matrix</span>
+          <h2 id="features-heading" class="section-title">
+            Deep Ring-0 Visibility &amp; Machine-Speed Mitigation
+          </h2>
+          <p class="section-subtitle">
+            Traditional endpoint agents fail at user-space boundaries. SentinelGuard compiles dynamic eBPF bytecode directly into the Linux &amp; Windows kernel for un-bypassable observability.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- Feature 1 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Kernel Forensics (eBPF)</h3>
+            <p class="feature-desc">
+              Execute sandboxed, verifier-guaranteed eBPF bytecode inside OS kernels without recompiling or loading dangerous third-party kernel modules. Zero kernel panic risk.
+            </p>
+            <ul class="feature-checklist" aria-label="Kernel Forensics capabilities">
+              <li>Direct syscall invocation auditing</li>
+              <li>Under 0.8% aggregate CPU impact</li>
+              <li>Container namespace boundary tracking</li>
+            </ul>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Quantum-Resistant Encryption</h3>
+            <p class="feature-desc">
+              Harden all inter-node service mesh communications with post-quantum cryptography. Implements NIST-approved ML-KEM (Kyber) and ML-DSA (Dilithium) standards against harvest-now-decrypt-later attacks.
+            </p>
+            <ul class="feature-checklist" aria-label="Encryption capabilities">
+              <li>Lattice-based cryptographic handshakes</li>
+              <li>Zero-roundtrip ephemeral rekeying</li>
+              <li>FIPS 140-3 Level 4 HSM integration</li>
+            </ul>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="22" y1="12" x2="18" y2="12"/>
+                <line x1="6" y1="12" x2="2" y2="12"/>
+                <line x1="12" y1="6" x2="12" y2="2"/>
+                <line x1="12" y1="22" x2="12" y2="18"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Blast Radius Quarantine</h3>
+            <p class="feature-desc">
+              When lateral traversal is detected, our autonomic engine terminates offending sockets, drops malicious routes via XDP (eXpress Data Path), and snapshots volatile RAM within 140 microseconds.
+            </p>
+            <ul class="feature-checklist" aria-label="Quarantine capabilities">
+              <li>Sub-millisecond process freezing</li>
+              <li>Network namespace air-gapping</li>
+              <li>Live memory forensically sealed</li>
+            </ul>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">API Threat Interceptor</h3>
+            <p class="feature-desc">
+              Inspect Layer 7 gRPC, REST, and GraphQL payloads without TLS decryption proxies. Directly reconstructs API contracts at the kernel socket layer to defeat OWASP Top 10 exploits in flight.
+            </p>
+            <ul class="feature-checklist" aria-label="API Interceptor capabilities">
+              <li>Zero-overhead TLS socket inspection</li>
+              <li>Schema drift &amp; shadow API discovery</li>
+              <li>Real-time BOLA/BFLA exploit blocking</li>
+            </ul>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <circle cx="12" cy="11" r="3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Identity &amp; Workload Vault</h3>
+            <p class="feature-desc">
+              Tie kernel execution permissions to cryptographic workload attestation. SPIFFE/SPIRE identity tokens ensure that only cryptographically signed container binaries can invoke privileged capabilities.
+            </p>
+            <ul class="feature-checklist" aria-label="Identity capabilities">
+              <li>Continuous runtime attestation</li>
+              <li>Automated mTLS certificate rotators</li>
+              <li>Ephemeral privilege granting</li>
+            </ul>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Automated Compliance</h3>
+            <p class="feature-desc">
+              Eliminate manual auditor screenshots. Continuous telemetric proof generation streams directly into your compliance governance tools with cryptographically verified nonces and audit trails.
+            </p>
+            <ul class="feature-checklist" aria-label="Compliance capabilities">
+              <li>SOC-2 Type II telemetry evidence locks</li>
+              <li>PCI-DSS 4.0 automated control checks</li>
+              <li>One-click auditor export dashboards</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE COMPARISON SECTION (FLEXBOX) -->
+    <section id="architecture" class="architecture-section" aria-labelledby="arch-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Next-Gen Paradigm Shift</span>
+          <h2 id="arch-heading" class="section-title">
+            Legacy Perimeter vs. SentinelGuard Zero-Trust
+          </h2>
+          <p class="section-subtitle">
+            See how shifting from castle-and-moat perimeter appliances to decentralized eBPF micro-perimeters eliminates lateral breach pathways.
+          </p>
+        </div>
+
+        <div class="comparison-container">
+          
+          <!-- Legacy Architecture Column -->
+          <div class="comparison-column comparison-legacy">
+            <div class="comparison-badge badge-legacy">Legacy Architecture</div>
+            <h3 class="comparison-column-title">Perimeter VPN &amp; Heavy User-Space Agents</h3>
+            <p class="comparison-column-desc">
+              Relies on trusted internal subnets. Once an attacker bypasses the gateway or exploits an unpatched dependency, lateral traversal is virtually unobstructed.
+            </p>
+
+            <ul class="comparison-list" aria-label="Legacy drawbacks">
+              <li class="comparison-item item-negative">
+                <span class="comparison-icon" aria-hidden="true">&times;</span>
+                <div>
+                  <strong>High Runtime Drag:</strong>
+                  Heavy agent user-space hooks consume 8–18% CPU and induce significant memory footprint.
+                </div>
+              </li>
+              <li class="comparison-item item-negative">
+                <span class="comparison-icon" aria-hidden="true">&times;</span>
+                <div>
+                  <strong>Slow Reactive Alerting:</strong>
+                  SIEM batch logs alert security teams 15 to 45 minutes after payload detonation.
+                </div>
+              </li>
+              <li class="comparison-item item-negative">
+                <span class="comparison-icon" aria-hidden="true">&times;</span>
+                <div>
+                  <strong>Blind to Kernel Rootkits:</strong>
+                  User-space agents cannot inspect ring-0 manipulation or unlinked socket hijacks.
+                </div>
+              </li>
+              <li class="comparison-item item-negative">
+                <span class="comparison-icon" aria-hidden="true">&times;</span>
+                <div>
+                  <strong>Fragile Network Chokepoints:</strong>
+                  Centralized firewall appliances create latency bottlenecks and single points of failure.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SentinelGuard Architecture Column -->
+          <div class="comparison-column comparison-modern">
+            <div class="comparison-badge badge-modern">SentinelGuard AI Zero-Trust</div>
+            <h3 class="comparison-column-title">Decentralized Ring-0 eBPF Micro-Perimeter</h3>
+            <p class="comparison-column-desc">
+              Every single container, thread, and process is wrapped in a cryptographically isolated micro-perimeter that operates directly inside the OS network stack.
+            </p>
+
+            <ul class="comparison-list" aria-label="SentinelGuard advantages">
+              <li class="comparison-item item-positive">
+                <span class="comparison-icon" aria-hidden="true">&#10003;</span>
+                <div>
+                  <strong>Virtually Invisible Overhead:</strong>
+                  eBPF native JIT bytecode operates under 0.8% CPU, with zero kernel module recompiles.
+                </div>
+              </li>
+              <li class="comparison-item item-positive">
+                <span class="comparison-icon" aria-hidden="true">&#10003;</span>
+                <div>
+                  <strong>Sub-Millisecond Autonomous Containment:</strong>
+                  Instantaneous socket severance and namespace freeze within &lt; 140 microseconds.
+                </div>
+              </li>
+              <li class="comparison-item item-positive">
+                <span class="comparison-icon" aria-hidden="true">&#10003;</span>
+                <div>
+                  <strong>Immutable Kernel Verifier Protection:</strong>
+                  Operating at ring-0 ensures visibility into all syscalls before user-space execution begins.
+                </div>
+              </li>
+              <li class="comparison-item item-positive">
+                <span class="comparison-icon" aria-hidden="true">&#10003;</span>
+                <div>
+                  <strong>NIST Post-Quantum Cryptographic Mesh:</strong>
+                  Lattice-based Kyber-1024 encryption guarantees privacy against quantum decryptors.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Architecture Flow Pipeline -->
+        <div class="pipeline-card" aria-label="Autonomous Mitigation Pipeline">
+          <h3 class="pipeline-title">Autonomous Threat Neutralization Flow</h3>
+          <div class="pipeline-steps">
+            <div class="pipeline-step">
+              <div class="step-number" aria-hidden="true">01</div>
+              <div class="step-content">
+                <h4 class="step-title">Syscall Ingress</h4>
+                <p class="step-text">eBPF hook traps execve, socket connect, and memory allocation requests at ring-0.</p>
+              </div>
+            </div>
+            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+            <div class="pipeline-step">
+              <div class="step-number" aria-hidden="true">02</div>
+              <div class="step-content">
+                <h4 class="step-title">AI Intent Modeling</h4>
+                <p class="step-text">Micro-tensor engine validates process execution graph against baseline heuristics.</p>
+              </div>
+            </div>
+            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+            <div class="pipeline-step">
+              <div class="step-number" aria-hidden="true">03</div>
+              <div class="step-content">
+                <h4 class="step-title">XDP Socket Drop</h4>
+                <p class="step-text">Unsanctioned network packets dropped at NIC driver layer before reaching OS stack.</p>
+              </div>
+            </div>
+            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+            <div class="pipeline-step">
+              <div class="step-number" aria-hidden="true">04</div>
+              <div class="step-content">
+                <h4 class="step-title">Cgroup Isolation</h4>
+                <p class="step-text">Targeted container cgroup frozen, live memory dumped, and incident ticket logged.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING MATRIX SECTION (GRID) -->
+    <section id="pricing" class="pricing-section" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Transparent Enterprise Value</span>
+          <h2 id="pricing-heading" class="section-title">
+            Predictable Scalability for Modern Cloud Estates
+          </h2>
+          <p class="section-subtitle">
+            Deploy SentinelGuard sensors across Kubernetes, hybrid clouds, bare-metal servers, and serverless compute with zero surprise costs.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Tier 1: Cloud Startup -->
+          <article class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="tier-name">Cloud Startup</h3>
+              <p class="tier-desc">Comprehensive kernel security for early-stage cloud teams and fast-growing clusters.</p>
+              <div class="tier-price-box">
+                <span class="tier-currency">$</span>
+                <span class="tier-amount">499</span>
+                <span class="tier-period">/ month billed annually</span>
+              </div>
+            </div>
+            <div class="pricing-card-body">
+              <ul class="tier-features" aria-label="Cloud Startup tier features">
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Up to 50 Kubernetes or Linux nodes</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Standard eBPF kernel telemetry probes</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> 14-day cold telemetry audit retention</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Automated container micro-segmentation</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Community &amp; Slack emergency support</li>
+              </ul>
+            </div>
+            <div class="pricing-card-footer">
+              <a href="#contact" class="btn btn-secondary btn-block">Start 14-Day Free Pilot</a>
+            </div>
+          </article>
+
+          <!-- Tier 2: Enterprise Shield (Featured) -->
+          <article class="pricing-card pricing-card-featured">
+            <div class="featured-ribbon">Most Popular Choice</div>
+            <div class="pricing-card-header">
+              <h3 class="tier-name">Enterprise Shield</h3>
+              <p class="tier-desc">Full autonomous mitigation, post-quantum encryption, and multi-cloud governance.</p>
+              <div class="tier-price-box">
+                <span class="tier-currency">$</span>
+                <span class="tier-amount">1,499</span>
+                <span class="tier-period">/ month billed annually</span>
+              </div>
+            </div>
+            <div class="pricing-card-body">
+              <ul class="tier-features" aria-label="Enterprise Shield tier features">
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Up to 250 multi-cloud nodes included</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> <strong>Sub-140μs autonomous blast quarantine</strong></li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> NIST Kyber &amp; Dilithium encryption mesh</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> 90-day forensic tamper-evident logs</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Real-time Splunk, Datadog &amp; Sentinel integration</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> 99.999% SLA &amp; 15-minute response time</li>
+              </ul>
+            </div>
+            <div class="pricing-card-footer">
+              <a href="#contact" class="btn btn-primary btn-block">Deploy Enterprise Shield</a>
+            </div>
+          </article>
+
+          <!-- Tier 3: Global Sovereign -->
+          <article class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="tier-name">Global Sovereign</h3>
+              <p class="tier-desc">Bespoke air-gapped deployments, sovereign cloud isolation, and dedicated threat teams.</p>
+              <div class="tier-price-box">
+                <span class="tier-custom">Custom</span>
+                <span class="tier-period">Tailored sovereign enterprise contract</span>
+              </div>
+            </div>
+            <div class="pricing-card-body">
+              <ul class="tier-features" aria-label="Global Sovereign tier features">
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Unlimited nodes &amp; air-gapped clusters</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> On-premises HSM &amp; sovereign key management</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Custom zero-day eBPF heuristic generation</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Infinite immutable forensic ledger storage</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> Dedicated Principal Security Architect assigned</li>
+                <li><span class="check-icon" aria-hidden="true">&#10003;</span> FedRAMP High / Classified cloud tenancy</li>
+              </ul>
+            </div>
+            <div class="pricing-card-footer">
+              <a href="#contact" class="btn btn-secondary btn-block">Contact Architecture Council</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIANCE & ACCREDITATIONS SECTION -->
+    <section id="compliance" class="compliance-section" aria-labelledby="compliance-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Regulatory Integrity</span>
+          <h2 id="compliance-heading" class="section-title">
+            Continuously Audited. Cryptographically Proven.
+          </h2>
+          <p class="section-subtitle">
+            SentinelGuard AI transforms periodic compliance panic into continuous real-time verification with tamper-proof cryptographic ledgers.
+          </p>
+        </div>
+
+        <div class="compliance-details-grid">
+          
+          <div class="compliance-card">
+            <div class="compliance-header">
+              <span class="badge-status badge-success">ACTIVE &amp; AUDITED</span>
+              <h3 class="compliance-name">SOC-2 Type II + SOC 3</h3>
+            </div>
+            <p class="compliance-desc">
+              Independently verified by Big Four auditors across all five Trust Services Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy.
+            </p>
+            <div class="compliance-meta">
+              <span>Audited by: Deloitte &amp; Touche LLP</span> &bull; <span>Cycle: 2026 Continuous</span>
+            </div>
+          </div>
+
+          <div class="compliance-card">
+            <div class="compliance-header">
+              <span class="badge-status badge-success">ACTIVE &amp; AUDITED</span>
+              <h3 class="compliance-name">ISO/IEC 27001:2022 &amp; 27701</h3>
+            </div>
+            <p class="compliance-desc">
+              Comprehensive Information Security and Privacy Information Management Systems accreditation covering all edge nodes, control planes, and global engineering teams.
+            </p>
+            <div class="compliance-meta">
+              <span>Accreditation: ANAB / UKAS Certified</span> &bull; <span>Cert ID: ISMS-994821</span>
+            </div>
+          </div>
+
+          <div class="compliance-card">
+            <div class="compliance-header">
+              <span class="badge-status badge-success">READY &amp; ENFORCED</span>
+              <h3 class="compliance-name">FedRAMP High Baseline &amp; GovCloud</h3>
+            </div>
+            <p class="compliance-desc">
+              Engineered to meet FedRAMP High security parameters, DoD IL5 compliance, and CJIS requirements for sovereign public sector infrastructure deployments.
+            </p>
+            <div class="compliance-meta">
+              <span>NIST SP 800-53 Rev. 5 Compliant</span> &bull; <span>FIPS 140-3 Cryptography</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESSIBLE TRIAL & CONTACT FORM SECTION -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-wrapper">
+          
+          <div class="contact-info">
+            <span class="section-tag">Initiate Deployment</span>
+            <h2 id="contact-heading" class="section-title">
+              Request Your 14-Day Enterprise Sentinel Pilot
+            </h2>
+            <p class="contact-desc">
+              Experience ring-0 observability in your staging environment. Our team provides an automated Helm chart or binary installer ready for validation within 60 minutes.
+            </p>
+
+            <div class="contact-benefits">
+              <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <div>
+                  <strong>No Disruptive Agent Installs:</strong>
+                  Native eBPF sensors compile safely via Linux kernel BPF verifier in sandbox mode.
+                </div>
+              </div>
+              <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <div>
+                  <strong>Pre-Signed Mutual NDA:</strong>
+                  Immediate enterprise confidentiality guarantee applied to all telemetry streams.
+                </div>
+              </div>
+              <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <div>
+                  <strong>Dedicated Senior Security Architect:</strong>
+                  Direct 1-on-1 architecture pairing via private Slack or MS Teams connect channel.
+                </div>
+              </div>
+            </div>
+
+            <div class="security-guarantee-box">
+              <div class="guarantee-title">Tamper-Proof Data Governance</div>
+              <p class="guarantee-text">
+                SentinelGuard never exports application memory or proprietary business logic. All telemetry payloads are hashed locally via BLAKE3 before transmission.
+              </p>
+            </div>
+          </div>
+
+          <!-- Accessible Form Component -->
+          <div class="contact-form-card">
+            <form action="#contact" method="post" class="accessible-form" novalidate>
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">Security Pilot Application</legend>
+                <p class="form-intro-text">All fields marked with <span class="required-asterisk" aria-hidden="true">*</span> are required for clearance validation.</p>
+
+                <div class="form-grid">
+                  
+                  <!-- Full Name -->
+                  <div class="form-group">
+                    <label for="fullname" class="form-label">
+                      Full Legal Name <span class="required-asterisk" aria-hidden="true">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="fullname" 
+                      name="fullname" 
+                      class="form-input" 
+                      required 
+                      aria-required="true"
+                      autocomplete="name"
+                      placeholder="e.g. Elena Vance, CISSP"
+                      aria-describedby="fullname-hint"
+                    >
+                    <span id="fullname-hint" class="form-hint">Used for SOC credentialing and security key verification</span>
+                  </div>
+
+                  <!-- Work Email -->
+                  <div class="form-group">
+                    <label for="work-email" class="form-label">
+                      Corporate Work Email <span class="required-asterisk" aria-hidden="true">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="work-email" 
+                      name="work-email" 
+                      class="form-input" 
+                      required 
+                      aria-required="true"
+                      autocomplete="email"
+                      placeholder="e.g. elena@enterprise.com"
+                      aria-describedby="email-hint"
+                    >
+                    <span id="email-hint" class="form-hint">Must match your organization domain (free webmail prohibited)</span>
+                  </div>
+
+                  <!-- Organization Name -->
+                  <div class="form-group">
+                    <label for="company" class="form-label">
+                      Organization / Company <span class="required-asterisk" aria-hidden="true">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="company" 
+                      name="company" 
+                      class="form-input" 
+                      required 
+                      aria-required="true"
+                      autocomplete="organization"
+                      placeholder="e.g. Apex Global Financial Inc."
+                    >
+                  </div>
+
+                  <!-- Node Scale Dropdown -->
+                  <div class="form-group">
+                    <label for="node-scale" class="form-label">
+                      Cluster Node Scale <span class="required-asterisk" aria-hidden="true">*</span>
+                    </label>
+                    <div class="select-wrapper">
+                      <select 
+                        id="node-scale" 
+                        name="node-scale" 
+                        class="form-select" 
+                        required 
+                        aria-required="true"
+                      >
+                        <option value="" disabled selected>Select anticipated node volume</option>
+                        <option value="pilot">1 – 25 Nodes (Pilot / Staging)</option>
+                        <option value="growth">26 – 100 Nodes (Growth Production)</option>
+                        <option value="enterprise">101 – 500 Nodes (Enterprise Multi-Cluster)</option>
+                        <option value="hyperscale">500+ Nodes (Hyperscale / Air-Gapped)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Primary Cloud Architecture -->
+                <div class="form-group form-group-full">
+                  <label for="cloud-provider" class="form-label">
+                    Primary Infrastructure Target <span class="required-asterisk" aria-hidden="true">*</span>
+                  </label>
+                  <div class="select-wrapper">
+                    <select 
+                      id="cloud-provider" 
+                      name="cloud-provider" 
+                      class="form-select" 
+                      required 
+                      aria-required="true"
+                    >
+                      <option value="" disabled selected>Select your primary cloud / runtime infrastructure</option>
+                      <option value="k8s-aws">AWS EKS / EC2 Native</option>
+                      <option value="k8s-gcp">Google Cloud GKE / Anthos</option>
+                      <option value="k8s-azure">Microsoft Azure AKS</option>
+                      <option value="hybrid-baremetal">Hybrid Bare-Metal / OpenShift</option>
+                      <option value="air-gapped">Air-Gapped Sovereign Environment</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Security Notes / Requirements -->
+                <div class="form-group form-group-full">
+                  <label for="security-notes" class="form-label">
+                    Specific Security Architecture Goals (Optional)
+                  </label>
+                  <textarea 
+                    id="security-notes" 
+                    name="security-notes" 
+                    class="form-textarea" 
+                    rows="3"
+                    placeholder="e.g. Mitigating container escape vectors in multi-tenant clusters, post-quantum compliance deadlines..."
+                    aria-describedby="notes-hint"
+                  ></textarea>
+                  <span id="notes-hint" class="form-hint">Briefly describe your current pain point or audit milestone</span>
+                </div>
+
+                <!-- Data Governance & Privacy Checkbox -->
+                <div class="form-group form-group-full">
+                  <div class="checkbox-container">
+                    <input 
+                      type="checkbox" 
+                      id="data-governance" 
+                      name="data-governance" 
+                      class="form-checkbox" 
+                      required 
+                      aria-required="true"
+                    >
+                    <label for="data-governance" class="checkbox-label">
+                      I confirm that I represent a corporate entity and agree to the 
+                      <a href="#compliance" class="inline-link">Data Governance Protocol</a> and 
+                      <a href="#compliance" class="inline-link">SOC-2 Confidentiality Terms</a>.
+                      <span class="required-asterisk" aria-hidden="true">*</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-block btn-submit">
+                    <span>Provision Enterprise Sandbox</span>
+                    <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </button>
+                  <p class="form-disclaimer">Instant deployment credentials dispatched via PGP-encrypted dispatch within 60 minutes.</p>
+                </div>
+
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SEMANTIC APPLICATION FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Operational Status -->
+        <div class="footer-col footer-col-brand">
+          <a href="#hero" class="brand-logo" aria-label="SentinelGuard AI - Back to Top">
+            <svg class="brand-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path d="M16 2 L28 7 L28 17 C28 24 16 30 16 30 C16 30 4 24 4 17 L4 7 Z" class="shield-hull" />
+              <path d="M16 7 L23 10.5 L23 17 C23 21.5 16 25.5 16 25.5 C16 25.5 9 21.5 9 17 L9 10.5 Z" class="shield-core" />
+              <circle cx="16" cy="16" r="3" class="shield-node" />
+            </svg>
+            <span class="brand-name">Sentinel<span class="brand-accent">Guard</span><span class="brand-badge">AI</span></span>
+          </a>
+          <p class="footer-brand-mission">
+            Pioneering autonomous ring-0 eBPF cybersecurity architectures for mission-critical enterprise clouds and sovereign enclaves.
+          </p>
+          <div class="system-status-indicator" role="status" aria-live="polite">
+            <span class="status-pulse-dot" aria-hidden="true"></span>
+            <span class="status-text">All Systems Operational &bull; 99.999% SLA Active</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Platform Links -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Platform &amp; Engine</h3>
+          <ul class="footer-links">
+            <li><a href="#features">eBPF Kernel Probes</a></li>
+            <li><a href="#features">Post-Quantum Cryptography</a></li>
+            <li><a href="#features">Blast Radius Quarantine</a></li>
+            <li><a href="#architecture">Zero-Trust Micro-Perimeters</a></li>
+            <li><a href="#features">Runtime API Interceptor</a></li>
+            <li><a href="#pricing">Pricing &amp; Subscriptions</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal & Security Governance -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal &amp; Assurance</h3>
+          <ul class="footer-links">
+            <li><a href="#compliance">SOC-2 Type II Report</a></li>
+            <li><a href="#compliance">ISO/IEC 27001 Certification</a></li>
+            <li><a href="#compliance">HIPAA Business Associate (BAA)</a></li>
+            <li><a href="#compliance">GDPR Data Processing Addendum</a></li>
+            <li><a href="#compliance">Responsible Vulnerability Disclosure</a></li>
+            <li><a href="#compliance">Accessibility Statement (WCAG AAA)</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Physical Address & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Global Headquarters</h3>
+          <address class="footer-address">
+            <span class="address-line">SentinelGuard Technologies Inc.</span>
+            <span class="address-line">500 Howard Street, Suite 400</span>
+            <span class="address-line">San Francisco, CA 94105, USA</span>
+            <span class="address-contact">
+              <strong>Direct:</strong> <a href="tel:+18005557368" class="footer-contact-link">+1 (800) 555-SENT</a>
+            </span>
+            <span class="address-contact">
+              <strong>Security Operations:</strong> <a href="mailto:soc@sentinelguard.ai" class="footer-contact-link">soc@sentinelguard.ai</a>
+            </span>
+            <span class="address-contact">
+              <strong>Inquiries:</strong> <a href="mailto:contact@sentinelguard.ai" class="footer-contact-link">contact@sentinelguard.ai</a>
+            </span>
+          </address>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="copyright-notice">
+            &copy; 2026 SentinelGuard Technologies Inc. All rights reserved. SentinelGuard, eBPF Sentinel, and the Shield Node logo are registered trademarks.
+          </p>
+          <div class="a11y-badge">
+            <span class="a11y-icon" aria-hidden="true">&#9855;</span>
+            <span>Targeting WCAG 2.2 AA/AAA &amp; Section 508 Conformance</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
